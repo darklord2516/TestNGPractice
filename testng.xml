@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Dept">
+    <test name="Personal Loan Tests">
+        <classes>
+            <class name="Tests.day1">
+                <methods>
+                    <include name="secondTest"></include>       <!--This will only run the included defined method and exclude all other methods in that class-->
+                </methods>
+            </class>
+            <class name="Tests.day2"/>
+            <class name="Tests.day4"/>
+        </classes>
+    </test>
+
+    <test name="Car Loan Tests">
+        <classes>
+            <class name="Tests.day3">
+                <methods>
+                    <exclude name="MobileLoginCarLoan"></exclude> <!--This will only exclude the defined method and run other methods in that class-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
